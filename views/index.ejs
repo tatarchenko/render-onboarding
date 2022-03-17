@@ -1,0 +1,74 @@
+<h1>
+    <%= author %>'s Own Render Service
+</h1>
+
+<p class="counter">
+    <span>Hits:</span>
+    <%= hits %>
+</p>
+
+<h2>Environment</h2>
+
+<table>
+    <tr>
+        <th>RENDER_EXTERNAL_HOSTNAME</th>
+        <td>
+            <%= RENDER_EXTERNAL_HOSTNAME %>
+        </td>
+        <td>The URL for this service</td>
+    </tr>
+    <tr>
+        <th>RENDER_GIT_COMMIT</th>
+        <td>
+            <%= RENDER_GIT_COMMIT %>
+        </td>
+        <td>The version of code currently deployed</td>
+    </tr>
+    <tr>
+        <th>REDIS_URL</th>
+        <td>
+            <%= REDIS_URL %>
+        </td>
+        <td>How this service should connect to the Redis datastore</td>
+    </tr>
+    <tr>
+        <th>RENDER_SERVICE_NAME</th>
+        <td>
+            <%= RENDER_SERVICE_NAME %>
+        </td>
+        <td>The name of this Service in Render's UI</td>
+    </tr>
+</table>
+
+<footer>
+    Made with ❤️, all around the world.
+</footer>
+
+<style>
+    body {
+        max-width: 500px;
+        margin: 20px auto;
+        font: 16px/1.4 helvetica;
+    }
+
+    table {
+        font: 13px/1.2 helvetica;
+        text-align: left;
+        border: none;
+        padding: none;
+    }
+
+    td,
+    th {
+        border: none;
+        border-bottom: 1px solid #999;
+        padding: 4px 0;
+    }
+
+    .counter,
+    footer {
+        margin: 20px -20px;
+        padding: 20px;
+        background: #d2d2d2;
+    }
+</style>
