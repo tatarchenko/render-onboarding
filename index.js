@@ -30,7 +30,7 @@ app.get('/', async (req, res) => {
 const getHitCount = async () => {
     try {
         const client = await redis.createClient({ url: process.env.REDIS_URL, retry_strategy: (o) => { return undefined } });
-        client.on('error', (err) => { throw new Error(err) });
+        client.on('error', (err) => { console.log(err); throw new Error(err) });
         await client.connect();
         return client.incr("hits")
     } catch (e) {
