@@ -9,36 +9,36 @@
 
 <h2>Environment</h2>
 
-<table>
-    <tr>
-        <th>RENDER_EXTERNAL_HOSTNAME</th>
-        <td>
-            <%= RENDER_EXTERNAL_HOSTNAME %>
-        </td>
-        <td>The URL for this service</td>
-    </tr>
-    <tr>
-        <th>RENDER_GIT_COMMIT</th>
-        <td>
-            <%= RENDER_GIT_COMMIT %>
-        </td>
-        <td>The version of code currently deployed</td>
-    </tr>
-    <tr>
-        <th>REDIS_URL</th>
-        <td>
-            <%= REDIS_URL %>
-        </td>
-        <td>How this service should connect to the Redis datastore</td>
-    </tr>
-    <tr>
-        <th>RENDER_SERVICE_NAME</th>
-        <td>
-            <%= RENDER_SERVICE_NAME %>
-        </td>
-        <td>The name of this Service in Render's UI</td>
-    </tr>
-</table>
+<dl>
+
+    <dt>RENDER_EXTERNAL_HOSTNAME</dt>
+    <dd>
+        <%= RENDER_EXTERNAL_HOSTNAME %>
+    </dd>
+    <dd>The URL for this service</dd>
+
+
+    <dt>RENDER_GIT_COMMIT</dt>
+    <dd>
+        <%= RENDER_GIT_COMMIT %>
+    </dd>
+    <dd>The version of code currently deployed</dd>
+
+
+    <dt>REDIS_URL</dt>
+    <dd>
+        <%= REDIS_URL %>
+    </dd>
+    <dd>How this service should connect to the Redis datastore</dd>
+
+
+    <dt>RENDER_SERVICE_NAME</dt>
+    <dd>
+        <%= RENDER_SERVICE_NAME %>
+    </dd>
+    <dd>The name of this Service in Render's UI</dd>
+
+</dl>
 
 <footer>
     Made with ❤️, all around the world.
