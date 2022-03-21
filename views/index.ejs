@@ -7,7 +7,7 @@
     <%= hits %>
 </p>
 
-<h2>Environment</h2>
+<h2>Environment variables</h2>
 
 <dl>
 
@@ -15,28 +15,28 @@
     <dd>
         <%= RENDER_EXTERNAL_HOSTNAME %>
     </dd>
-    <dd>The URL for this service</dd>
+    <dd class="info">The URL for this service</dd>
 
 
     <dt>RENDER_GIT_COMMIT</dt>
     <dd>
         <%= RENDER_GIT_COMMIT %>
     </dd>
-    <dd>The version of code currently deployed</dd>
+    <dd class="info">The version of code currently deployed</dd>
 
 
     <dt>REDIS_URL</dt>
     <dd>
         <%= REDIS_URL %>
     </dd>
-    <dd>How this service should connect to the Redis datastore</dd>
+    <dd class="info">How this service should connect to the Redis datastore</dd>
 
 
     <dt>RENDER_SERVICE_NAME</dt>
     <dd>
         <%= RENDER_SERVICE_NAME %>
     </dd>
-    <dd>The name of this Service in Render's UI</dd>
+    <dd class="info">The name of this Service in Render's UI</dd>
 
 </dl>
 
@@ -70,5 +70,21 @@
         margin: 20px -20px;
         padding: 20px;
         background: #d2d2d2;
+    }
+
+    dt,
+    dd {
+        font: mono;
+        color: #222;
+    }
+
+    dt {
+        margin-top: 1.5em;
+    }
+
+    dd.info {
+        font: inherit;
+        font-style: italic;
+        color: #666;
     }
 </style>
